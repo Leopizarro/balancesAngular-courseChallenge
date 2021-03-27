@@ -1,0 +1,17 @@
+<div class="ingreso">
+  <h2 class="ingreso_titulo">Ingresos</h2>
+
+
+      <div *ngFor="let singleIngreso of ingresos" class="elemento limpiarEstilos">
+          <div class="elemento_descripcion">{{singleIngreso.description}}</div>
+          <div class="right limpiarEstilos">
+              <div class="elemento_valor">+ {{singleIngreso.value | currency: 'CLP' : '$'}}</div>
+              <div class="elemento_eliminar">
+                  <button class="elemento_eliminar--btn" (click)="deleteIngreso(singleIngreso)">
+                      <i class="ion-ios-close-outline"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+
+</div>
